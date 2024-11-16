@@ -16,11 +16,6 @@ class Video:
         self.time_now = 0
         self.adult_mode = adult_mode
 
-    def __eq__(self, other):
-        return self.title == other.title
-
-    def __contains__(self, item):
-        return item in self.title
 
 class UrTube:
     def __init__(self):
@@ -77,11 +72,11 @@ class UrTube:
                 print('Конец видео')
 
 
-if __name__ == '__main__':
 
-    ur = UrTube()
-    v1 = Video('Лучший язык программирования 2024 года', 200)
-    v2 = Video('Для чего девушкам парень программист?', 10, adult_mode=True)
+
+ur = UrTube()
+v1 = Video('Лучший язык программирования 2024 года', 200)
+v2 = Video('Для чего девушкам парень программист?', 10, adult_mode=True)
 
 # Добавление видео
 ur.add(v1, v2)
